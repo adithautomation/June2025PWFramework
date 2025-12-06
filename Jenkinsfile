@@ -41,10 +41,11 @@ pipeline {
         NODE_VERSION = '20'
         CI = 'true'
         PLAYWRIGHT_BROWSERS_PATH = "${WORKSPACE}/.cache/ms-playwright"
-        // NOTE: removed SLACK_WEBHOOK_URL = credentials('slack-webhook') to avoid early evaluation
+        SLACK_WEBHOOK_URL = credentials('slack-webhook-token')
         // Email recipients - update these with your actual email addresses
-        EMAIL_RECIPIENTS = 'adithautomation@gmail.com, mail@adithautomation.com'
+        EMAIL_RECIPIENTS = 'mailto@adithautomation.com, adithautomation@gmail.com'
     }
+
 
     options {
         buildDiscarder(logRotator(numToKeepStr: '20'))
