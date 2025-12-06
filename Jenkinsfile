@@ -38,7 +38,7 @@ pipeline {
         PLAYWRIGHT_BROWSERS_PATH = "${WORKSPACE}/.cache/ms-playwright"
         SLACK_WEBHOOK_URL = credentials('slack-webhook')
         // Email recipients - update these with your actual email addresses
-        EMAIL_RECIPIENTS = 'mailto@adithautomation.com, submit@naveenautomationlabs.com'
+        EMAIL_RECIPIENTS = 'mailto@adithautomation.com'
     }
 
     options {
