@@ -34,14 +34,14 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS-20'
+        nodejs 'nodejs'
     }
 
     environment {
         NODE_VERSION = '20'
         CI = 'true'
         PLAYWRIGHT_BROWSERS_PATH = "${WORKSPACE}/.cache/ms-playwright"
-        SLACK_WEBHOOK_URL = credentials('slack-webhook-token')
+        SLACK_WEBHOOK_URL = credentials('slack-webhook')
         // Email recipients - update these with your actual email addresses
         EMAIL_RECIPIENTS = 'mailto@adithautomation.com, adithautomation@gmail.com'
     }
